@@ -1,0 +1,118 @@
+.slider-container {
+    position: relative;
+    padding-bottom: 4rem;
+    @media screen and (max-width: 768px) {
+        margin-top: 20px;
+    }
+    .product-slider {
+        position: relative;
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        margin-top: 1rem;
+        padding-block: 5rem 2rem;
+
+        @media screen and (max-width: 768px) {
+            margin-top: 0;
+            padding-block: 3rem 2rem;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .slider-inner {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            margin: 0 -5px;
+            padding: 0 20px;
+            gap: 100px;
+            @media screen and (max-width: 768px) {
+                gap:30px;
+            }
+        }
+
+        .slide {
+            flex: 0 0 calc(100% / 3);
+            margin: 0 5px;
+            padding: 0 5px;
+            box-sizing: border-box;
+            position: relative;
+            transition: transform 1s ease;
+            cursor: grab;
+
+            .drag-btn {
+                color: #000;
+                background-color: #fff;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                border-radius: 50%;
+                left: 50%;
+                top: 50%;
+                z-index: 100;
+                border: none;
+                transform: translate(-50%, -50%);
+                transition: all .5s;
+                opacity: 0;
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            
+            }
+
+
+            &.active {
+
+                .drag-btn {
+                    opacity: 1;
+                }
+            }
+
+            &.prev {
+                transform: rotateZ(-10deg) translateX(-30px) translateY(50px);
+            }
+
+            &.next {
+                transform: rotateZ(10deg) translateX(30px) translateY(50px);
+            }
+        }
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 0 solid transparent;
+            transition: border 0.3s ease;
+            max-width: 434px;
+            max-height: 620px;
+            pointer-events: none;
+
+            @media screen and (max-width: 768px) {
+                width: 232px;
+                height: 331px;
+            }
+        }
+    }
+
+    h3 {
+        line-height: 60px;
+        font-size: 36px;
+        font-weight: 400;
+        margin-bottom: 20px;
+        @media screen and (max-width: 768px) {
+           font-size: 24px;
+           margin-bottom: 0;
+        }
+    }
+
+    p {
+        line-height: 28px;
+        font-size: 24px;
+        font-weight: 400;
+        color: #7A7777;
+    }
+}

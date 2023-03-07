@@ -1,0 +1,30 @@
+section#products{
+    background-color: #FFFCFA;
+    padding-top:10rem;
+    text-align: center;
+    @media screen and (max-width: 768px) {
+        padding-top: 5rem;
+    }
+    h2{
+        color:#000;
+        font-size: 56px;
+        font-weight: 400;
+        margin-bottom: 46px;
+        min-height: 20px;
+        @media screen and (max-width: 768px) {
+            font-size: 30px;
+            margin-bottom: 19px;
+        }
+    }
+    p{
+        color:#7A7777;
+        font-size: 24px;
+        max-width: 748px;
+        margin:auto;
+        min-height: 20px;
+        @media screen and (max-width: 768px) {
+            font-size: 16px;
+            max-width: 312px;
+        }
+    }
+}
