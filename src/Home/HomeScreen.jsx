@@ -30,6 +30,9 @@ export default function HomeScreen() {
 
     return (
         <React.Fragment>
+            {mainSliderItems.map((item)=>(
+                <link rel="preload" as="image" href={item.image} />
+            ))}
             <HeaderComponent />
             <MainSlider items={mainSliderItems}/>
             <section id="products" ref={prodcutsRef}>
