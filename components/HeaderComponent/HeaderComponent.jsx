@@ -1,5 +1,5 @@
 import React from 'react';
-import './headerComponent.scss';
+import './HeaderComponent.scss';
 
 import arrow from '../../public/images/arrow.png';
 
