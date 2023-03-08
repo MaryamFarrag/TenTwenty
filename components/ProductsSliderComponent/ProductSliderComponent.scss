@@ -4,6 +4,11 @@
     @media screen and (max-width: 768px) {
         margin-top: 20px;
     }
+    .empty{
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
     .product-slider {
         position: relative;
         width: 100%;
@@ -51,7 +56,7 @@
                 position: absolute;
                 border-radius: 50%;
                 left: 50%;
-                top: 50%;
+                top: 44%;
                 z-index: 100;
                 border: none;
                 transform: translate(-50%, -50%);
@@ -85,10 +90,11 @@
             max-width: 434px;
             max-height: 620px;
             pointer-events: none;
-
+            margin-bottom: 60px;
             @media screen and (max-width: 768px) {
                 width: 232px;
                 height: 331px;
+                margin-bottom: 40px;
             }
         }
     }

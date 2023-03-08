@@ -107,7 +107,7 @@ const ProductSlider = ({clients}) => {
                 onMouseUp={handleMouseUp}
             >
                 <div className="slider-inner">
-                <div className="slide">
+                <div className="slide empty">
                           {/* empty slide */}
                         </div>
                     {clients.map((client, i) => (
@@ -124,7 +124,7 @@ const ProductSlider = ({clients}) => {
                             <p>{client.location}</p>
                         </div>
                     ))}
-                     <div className="slide">
+                     <div className="slide empty">
                           {/* empty slide */}
                         </div>
                 </div>
