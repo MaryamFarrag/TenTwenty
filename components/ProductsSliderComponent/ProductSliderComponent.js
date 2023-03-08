@@ -106,6 +106,9 @@ const ProductSlider = ({clients}) => {
                 onMouseUp={handleMouseUp}
             >
                 <div className="slider-inner">
+                <div className="slide">
+                          {/* empty slide */}
+                        </div>
                     {clients.map((client, i) => (
                         <div className="slide" key={i}>
                             <img
@@ -116,8 +119,8 @@ const ProductSlider = ({clients}) => {
                             />
                             <button className={`drag-btn ${isDragging?"hide":""}`}>Drag</button>
 
-                            <h3>{clients[index]?.title}</h3>
-                            <p>{clients[index]?.location}</p>
+                            <h3>{client.title}</h3>
+                            <p>{client.location}</p>
                         </div>
                     ))}
                 </div>
