@@ -116,16 +116,17 @@ const ProductSlider = ({clients}) => {
                             />
                             <button className={`drag-btn ${isDragging?"hide":""}`}>Drag</button>
 
+                            <h3>{clients[index]?.title}</h3>
+                            <p>{clients[index]?.location}</p>
                         </div>
                     ))}
-                  
                 </div>
                 
             </div>
-            <h3>{clients[index]?.title}</h3>
-            <p>{clients[index]?.location}</p>
+           
         </div>
     );
 };
 
 export default ProductSlider;
+
