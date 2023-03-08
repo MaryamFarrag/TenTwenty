@@ -40,7 +40,7 @@
             padding: 0 5px;
             box-sizing: border-box;
             position: relative;
-            transition: transform 1s ease;
+            transition: transform 1s ease-in-out;
             cursor: grab;
 
             .drag-btn {
@@ -73,14 +73,6 @@
                 h3,p{
                     opacity: 1;
                 }
-            }
-
-            &.prev {
-                transform: rotateZ(-10deg) translateX(-30px) translateY(50px);
-            }
-
-            &.next {
-                transform: rotateZ(10deg) translateX(30px) translateY(50px);
             }
         }
 

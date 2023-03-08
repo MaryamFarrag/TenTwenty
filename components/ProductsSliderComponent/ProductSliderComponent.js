@@ -60,9 +60,10 @@ const ProductSlider = ({clients}) => {
                 slide.classList.add('active');
             } else if (slideCenter < rangeStart) {//prev
                 slide.style=`transform:rotate(-${distance/breakPoint}deg) translateY(10px)`
+                // slide.classList.add('prev');
             } else {//next
                 slide.style=`transform:rotate(${distance/breakPoint}deg) translateY(10px)`;
-                
+                // slide.classList.add('next');
             }
             setIndex(prev => newActiveSlideIndex || prev); 
 
@@ -123,6 +124,9 @@ const ProductSlider = ({clients}) => {
                             <p>{client.location}</p>
                         </div>
                     ))}
+                     <div className="slide">
+                          {/* empty slide */}
+                        </div>
                 </div>
                 
             </div>
