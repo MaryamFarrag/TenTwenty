@@ -47,6 +47,7 @@
             box-sizing: border-box;
             position: relative;
             transform-origin:center ;
+            pointer-events: none;
             // transition: rotate .5s ease;
             cursor: grab;
             .drag-btn {
@@ -69,7 +70,9 @@
                 }
             
             }
-
+            // &.empty{
+            //     flex: 0 0 calc(100% / 8);
+            // }
 
             &.active {
 

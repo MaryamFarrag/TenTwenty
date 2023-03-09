@@ -1,21 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './ProductSliderComponent.scss';
 
-const throttle = (cb, delay) => {
-    let wait = false;
-  
-    return (...args) => {
-      if (wait) {
-          return;
-      }
-  
-      cb(...args);
-      wait = true;
-      setTimeout(() => {
-        wait = false;
-      }, delay);
-    }
-};
 const getDistanceFromCenter = (element) => {
     const rect = element.getBoundingClientRect();
     const center = {
@@ -32,6 +17,7 @@ const getDistanceFromCenter = (element) => {
     );
     return distance;
 };
+
 const ProductSlider = ({clients}) => {
     const [index, setIndex] = useState(0);
     const [isDragging, setIsDragging] = useState(false);
@@ -86,7 +72,7 @@ const ProductSlider = ({clients}) => {
         setIsDragging(false); 
     };
 
-    const updateSlider = throttle(() => {
+    const updateSlider =() => {
         const sliderWidth = sliderRef.current.clientWidth;
         const slideWidth = sliderWidth / 3;
         const sliderInner = sliderInner?.current;
@@ -121,7 +107,7 @@ const ProductSlider = ({clients}) => {
         });
         // remove .active from previous active slide
         sliderInner?.querySelector('.slide.active:not(:nth-child(' + (newActiveSlideIndex + 1) + '))')?.classList?.remove('active');
-    },0);
+    };
 
     const scrollToCenter = () =>{
         let distance = getDistanceFromCenter(activeSlide);
@@ -142,10 +128,7 @@ const ProductSlider = ({clients}) => {
    
     const handleScroll = () =>{
         updateSlider();
-    }
-    
-
-    
+    }   
 
 
     return (
@@ -155,9 +138,7 @@ const ProductSlider = ({clients}) => {
                 ref={sliderRef}
                 onScroll={handleScroll}
                 onPointerDown={handleMouseDown}   
-
                 onPointerMove={handleMouseMove}
-
                 onPointerUp={handleMouseUp}
             >
                 <div className="slider-inner" ref={sliderInner}>
@@ -166,7 +147,6 @@ const ProductSlider = ({clients}) => {
                         </div>
                     {clients.map((client, i) => (
                         <div className="slide" key={i} ref={slidesRefs[i]}
-                            // style={{rotate:`${rotateDeg}deg`, transform:`translateY(${translateY} px)`}}
                         >
                             <img
                                 key={i}
