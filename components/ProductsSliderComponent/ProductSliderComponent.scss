@@ -70,9 +70,11 @@
                 }
             
             }
-            // &.empty{
-            //     flex: 0 0 calc(100% / 8);
-            // }
+            &.empty{
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
 
             &.active {
 
