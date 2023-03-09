@@ -17,7 +17,8 @@
         -webkit-overflow-scrolling: touch;
         margin-top: 1rem;
         padding-block: 5rem 2rem;
-
+        touch-action: none;
+        // scroll-behavior: smooth;
         @media screen and (max-width: 768px) {
             margin-top: 0;
             padding-block: 3rem 2rem;
@@ -45,9 +46,9 @@
             padding: 0 5px;
             box-sizing: border-box;
             position: relative;
-            transition: transform 1s ease-in-out;
+            transform-origin:center ;
+            // transition: rotate .5s ease;
             cursor: grab;
-
             .drag-btn {
                 color: #000;
                 background-color: #fff;
