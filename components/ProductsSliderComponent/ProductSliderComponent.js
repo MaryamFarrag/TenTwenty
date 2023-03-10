@@ -163,6 +163,7 @@ const ProductSlider = ({clients}) => {
                     ))}
                      <div className="slide empty">
                           {/* empty slide */}
+                          <p>empty space</p>
                         </div>
                 </div>
                 
