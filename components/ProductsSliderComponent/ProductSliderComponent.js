@@ -91,6 +91,7 @@ const ProductSlider = ({clients}) => {
             const distancePercentage = distance/(window.innerWidth/2);
             // const translateY = (120 * distancePercentage) - 10;//linear equation
             const y = (translateBreakPoint * Math.tan(distancePercentage * Math.PI/4));//arc equation
+    
             let rotate = distance/rotateBreakPoint;
             if(slideCenter < window.innerWidth/2){
                 rotate = -rotate;

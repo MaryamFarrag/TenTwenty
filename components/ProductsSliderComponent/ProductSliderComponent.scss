@@ -70,11 +70,11 @@
                 }
             
             }
-            &.empty{
-                @media screen and (max-width: 768px) {
-                    display: none;
-                }
-            }
+            // &.empty{
+            //     @media screen and (max-width: 768px) {
+            //         display: none;
+            //     }
+            // }
 
             &.active {
 
