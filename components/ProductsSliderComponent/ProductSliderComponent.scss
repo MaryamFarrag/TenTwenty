@@ -5,9 +5,9 @@
         margin-top: 20px;
     }
     .empty{
-        @media screen and (max-width: 768px) {
-            display: none;
-        }
+        // @media screen and (max-width: 768px) {
+        //     display: none;
+        // }
     }
     .product-slider {
         position: relative;
@@ -70,11 +70,6 @@
                 }
             
             }
-            // &.empty{
-            //     @media screen and (max-width: 768px) {
-            //         display: none;
-            //     }
-            // }
 
             &.active {
 
